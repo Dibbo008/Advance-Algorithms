@@ -4,3 +4,4 @@
 ## Flyod Warshell
 ## Johnsons
 ## Prims MST
+## Kruskals
