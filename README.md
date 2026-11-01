@@ -50,40 +50,6 @@ A collection of fundamental and advanced algorithms implemented in **C++**, focu
 | Rod Cutting | `O(n²)` |
 | OBST | `O(n³)` |
 
-## Getting Started
-
-**Prerequisites:** a C++ compiler such as G++, Clang, or MSVC.
-
-```bash
-# Clone the repository
-git clone https://github.com/Dibbo008/Advance-Algorithms.git
-cd Advance-Algorithms
-
-# Compile (example: LCS)
-g++ "Dynamic Programming/lcs.cpp" -o lcs
-
-# Run
-./lcs        # Linux / macOS
-lcs.exe      # Windows
-```
-
-To run a different algorithm, replace the source path and output name.
-
-## Future Improvements
-
-- [ ] Add more graph algorithms
-- [ ] Add greedy, divide-and-conquer, and backtracking algorithms
-- [ ] Expand the dynamic programming collection
-- [ ] Add sample input/output test cases
-
-## Contributing
-
-1. Fork the repository
-2. Create a branch (`git checkout -b feature/new-algorithm`)
-3. Commit your changes (`git commit -m "Add new algorithm"`)
-4. Push the branch (`git push origin feature/new-algorithm`)
-5. Open a Pull Request
-
 ## Author
 
 **Dibbo Adhikary** · [@Dibbo008](https://github.com/Dibbo008)
