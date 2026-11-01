@@ -1,39 +1,89 @@
 # Advance-Algorithms
 
-Welcome to the **Advance-Algorithms** repository[cite: 1]! This repository contains efficient implementations of fundamental and advanced graph algorithms, covering shortest-path finding and Minimum Spanning Trees (MST)[cite: 1].
-
-## Repository Overview
-
-This project serves as a reference collection for classical advanced algorithms[cite: 1]:
-
-| Category | Algorithm | Folder Path |
-| :--- | :--- | :--- |
-| **Shortest Path** | Dijkstra's Algorithm | `Dijkstra and BellmanFord`[cite: 1] |
-| **Shortest Path** | Bellman-Ford Algorithm | `Dijkstra and BellmanFord`[cite: 1] |
-| **Shortest Path** | Floyd-Warshall Algorithm | `Flyod Warshell`[cite: 1] |
-| **Shortest Path** | Johnson's Algorithm | `Johnsons`[cite: 1] |
-| **Minimum Spanning Tree** | Kruskal's Algorithm | `Kruskals`[cite: 1] |
-| **Minimum Spanning Tree** | Prim's Algorithm | `Prims MST`[cite: 1] |
-
----
+A collection of fundamental and advanced algorithms implemented in **C++**, focused on **graph algorithms** and **dynamic programming**. It is intended as a learning resource for understanding algorithm design, implementation, and problem-solving techniques.
 
 ## Covered Algorithms
 
-### Single-Source & All-Pairs Shortest Path
-* **Dijkstra's Algorithm:** Finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative edge weights[cite: 1].
-* **Bellman-Ford Algorithm:** Solves the single-source shortest path problem and handles graphs with negative edge weights while detecting negative weight cycles[cite: 1].
-* **Floyd-Warshall Algorithm:** An all-pairs shortest path algorithm using dynamic programming[cite: 1].
-* **Johnson's Algorithm:** Finds all-pairs shortest paths efficiently on sparse graphs by reweighting edges using Bellman-Ford and running Dijkstra's algorithm for every vertex[cite: 1].
+### 1. Shortest Path
 
-### Minimum Spanning Tree (MST)
-* **Kruskal's Algorithm:** A greedy algorithm that finds an MST by sorting edges and using a Disjoint Set Union (DSU) structure[cite: 1].
-* **Prim's Algorithm:** A greedy algorithm that grows an MST starting from an arbitrary vertex using priority queues[cite: 1].
+| Algorithm | Folder | Description |
+| :--- | :--- | :--- |
+| Dijkstra's Algorithm | `Dijkstra and BellmanFord` | Shortest paths from a source in graphs with non-negative edge weights. |
+| Bellman-Ford Algorithm | `Dijkstra and BellmanFord` | Single-source shortest paths; supports negative weights and detects negative cycles. |
+| Floyd-Warshall Algorithm | `Flyod Warshell` | All-pairs shortest paths using dynamic programming. |
+| Johnson's Algorithm | `Johnsons` | All-pairs shortest paths on sparse graphs using Bellman-Ford reweighting and Dijkstra. |
 
----
+### 2. Minimum Spanning Tree
 
-## Usage & Getting Started
+| Algorithm | Folder | Description |
+| :--- | :--- | :--- |
+| Kruskal's Algorithm | `Kruskals` | Sorts edges by weight and adds those that form no cycle, using a Disjoint Set Union (DSU). |
+| Prim's Algorithm | `Prims MST` | Grows the tree by repeatedly adding the minimum-weight edge to a new vertex. |
 
-### 1. Clone the Repository
+### 3. Dynamic Programming (`Dynamic Programming/`)
+
+| Problem | File | Description |
+| :--- | :--- | :--- |
+| Climbing Stairs (1 or 2 steps) | `climbing2stairs.cpp` | Counts ways to reach the top with 1 or 2 steps per move. |
+| Climbing Stairs (1, 2, or 3 steps) | `climbing3stairs.cpp` | Extends the problem to moves of 1, 2, or 3 steps. |
+| Coin Change | `coinchange.cpp` | Coin-denomination problem (variant defined by the implementation). |
+| Fibonacci | `fibonacci_dp.cpp` | Computes Fibonacci numbers by reusing previous values. |
+| Longest Common Subsequence | `lcs.cpp` | Finds the longest subsequence shared by two sequences. |
+| Optimal Binary Search Tree | `obst.cpp` | Builds a BST with minimum expected search cost. |
+| Rod Cutting | `rodcutting.cpp` | Cuts a rod to maximize total revenue. |
+
+## Complexity Summary
+
+`V` = vertices, `E` = edges.
+
+| Algorithm | Time Complexity |
+| :--- | :--- |
+| Dijkstra (binary heap) | `O((V + E) log V)` |
+| Bellman-Ford | `O(V · E)` |
+| Floyd-Warshall | `O(V³)` |
+| Johnson's | `O(V · E log V)` |
+| Kruskal's | `O(E log E)` |
+| Prim's (binary heap) | `O(E log V)` |
+| Fibonacci / Climbing Stairs | `O(n)` |
+| Coin Change | `O(n · amount)` |
+| LCS | `O(m · n)` |
+| Rod Cutting | `O(n²)` |
+| OBST | `O(n³)` |
+
+## Getting Started
+
+**Prerequisites:** a C++ compiler such as G++, Clang, or MSVC.
+
 ```bash
-git clone [https://github.com/Dibbo008/Advance-Algorithms.git](https://github.com/Dibbo008/Advance-Algorithms.git)
+# Clone the repository
+git clone https://github.com/Dibbo008/Advance-Algorithms.git
 cd Advance-Algorithms
+
+# Compile (example: LCS)
+g++ "Dynamic Programming/lcs.cpp" -o lcs
+
+# Run
+./lcs        # Linux / macOS
+lcs.exe      # Windows
+```
+
+To run a different algorithm, replace the source path and output name.
+
+## Future Improvements
+
+- [ ] Add more graph algorithms
+- [ ] Add greedy, divide-and-conquer, and backtracking algorithms
+- [ ] Expand the dynamic programming collection
+- [ ] Add sample input/output test cases
+
+## Contributing
+
+1. Fork the repository
+2. Create a branch (`git checkout -b feature/new-algorithm`)
+3. Commit your changes (`git commit -m "Add new algorithm"`)
+4. Push the branch (`git push origin feature/new-algorithm`)
+5. Open a Pull Request
+
+## Author
+
+**Dibbo Adhikary** · [@Dibbo008](https://github.com/Dibbo008)
